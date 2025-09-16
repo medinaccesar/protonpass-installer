@@ -1,0 +1,4 @@
+# Dependencias p
+requests>=2.32.4
+python-dotenv>=1.0.10
+python-gettext==5.0
