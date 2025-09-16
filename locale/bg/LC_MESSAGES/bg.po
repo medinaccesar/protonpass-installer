@@ -1,0 +1,134 @@
+msgid "{} Advertencia: No se han podido limpiar los archivos temporales: {}"
+msgstr "{} Внимание: Не могат да бъдат изчистени временните файлове: {}"
+
+msgid "{} Obteniendo la información de las versiones..."
+msgstr "{} Извличане на информация за версиите..."
+
+msgid "La versión {} no se ha encontrado en el JSON"
+msgstr "Версията {} не е намерена в JSON"
+
+msgid "Error al obtener la información de las versiones: {}"
+msgstr "Грешка при получаване на информация за версиите: {}"
+
+msgid "No se ha encontrado el archivo {} en la información de la versión"
+msgstr "Файлът {} не е намерен в информацията за версията"
+
+msgid "{} Descargando {}..."
+msgstr "{} Изтегляне на {}..."
+
+msgid "{} Progreso: {percent:.1f}%"
+msgstr "{} Напредък: {percent:.1f}%"
+
+msgid "{} Descarga finalizada: {}"
+msgstr "{} Изтеглянето приключи: {}"
+
+msgid "Error al descargar el archivo: {}"
+msgstr "Грешка при изтегляне на файла: {}"
+
+msgid "{} Calculando la suma de verificación (SHA512)..."
+msgstr "{} Изчисляване на контролна сума (SHA512)..."
+
+msgid "{} Suma de verificación esperada: {}"
+msgstr "{} Очаквана контролна сума: {}"
+
+msgid "{} Suma de verificación calculada: {}"
+msgstr "{} Изчислена контролна сума: {}"
+
+msgid "{} Instalando ProtonPass..."
+msgstr "{} Инсталиране на ProtonPass..."
+
+msgid "{} Error: Se requieren permisos de superusuario para instalar el paquete"
+msgstr "{} Грешка: Необходими са root права за инсталиране на пакета"
+
+msgid "{} ProtonPass se ha instalado correctamente"
+msgstr "{} ProtonPass е инсталиран успешно"
+
+msgid "{} Error durante la instalación:"
+msgstr "{} Грешка по време на инсталацията:"
+
+msgid "{} Intentando resolver las dependencias..."
+msgstr "{} Опит за разрешаване на зависимости..."
+
+msgid "{} Dependencias resueltas, ProtonPass se ha instalado correctamente"
+msgstr "{} Зависимостите са разрешени, ProtonPass е инсталиран успешно"
+
+msgid "{} No se pudieron resolver las dependencias automáticamente"
+msgstr "{} Зависимостите не можаха да бъдат разрешени автоматично"
+
+msgid "{} Error al ejecutar dpkg: {}"
+msgstr "{} Грешка при изпълнение на dpkg: {}"
+
+msgid "{} Iniciando la instalación de ProtonPass v{}"
+msgstr "{} Стартира се инсталация на ProtonPass v{}"
+
+msgid "{} Se ha obtenido la información de la versión"
+msgstr "{} Информацията за версията е получена"
+
+msgid "{} ¡AVISO! La suma de verificación no coincide."
+msgstr "{} ВНИМАНИЕ! Контролната сума не съвпада."
+
+msgid " El archivo descargado podría estar corrupto o comprometido."
+msgstr " Изтегленият файл може да е повреден или подправен."
+
+msgid " Por seguridad, no se procederá con la instalación."
+msgstr " Поради съображения за сигурност, инсталирането няма да продължи."
+
+msgid "{} La suma de verificación coincide"
+msgstr "{} Контролната сума съвпада"
+
+msgid "{} Se ha producido un error durante el proceso: {}"
+msgstr "{} Възникна грешка по време на процеса: {}"
+
+msgid "Descarga, verifica e instala ProtonPass automáticamente"
+msgstr "Автоматично изтегли, провери и инсталирай ProtonPass"
+
+msgid "Ejemplo: python3 protonpass_installer.py 1.32.5"
+msgstr "Пример: python3 protonpass_installer.py 1.32.5"
+
+msgid "Versión de ProtonPass a instalar (por ejemplo: 1.32.5)"
+msgstr "Версия на ProtonPass за инсталиране (напр.: 1.32.5)"
+
+msgid "Únicamente descarga y verifica, no instala"
+msgstr "Само изтегля и проверява, не инсталира"
+
+msgid "{} Este «script» está diseñado para sistemas basados en Debian/Ubuntu"
+msgstr "{} Този скрипт е предназначен за системи на основата на Debian/Ubuntu"
+
+msgid "{} Error: No se puede conectar a internet"
+msgstr "{} Грешка: Няма връзка с интернет"
+
+msgid "{} Se activa el modo de verificación, no se instalará la aplicación"
+msgstr "{} Режим само за проверка е активиран, приложението няма да се инсталира"
+
+msgid "{} ¡ProtonPass se ha instalado correctamente!"
+msgstr "{} ProtonPass беше инсталиран успешно!"
+
+msgid " Puedes encontrarlo en el menú de aplicaciones o ejecutar 'proton-pass'"
+msgstr " Можете да го намерите в менюто с приложения или чрез командата 'proton-pass'"
+
+msgid "{} Ha fallado la instalación. Revisa los errores anteriores."
+msgstr "{} Инсталацията не бе успешна. Проверете предходните грешки."
+
+#: protonpass_installer.py:232
+msgid "Muestra los idiomas disponibles y sale"
+msgstr "Показва наличните езици и излиза"
+
+#: protonpass_installer.py:233
+msgid "Establece el idioma de la aplicación (por ejemplo: -l es) y sale"
+msgstr "Задава езика на приложението (например: -l es) и излиза"
+
+#: protonpass_installer.py:234
+msgid "Muestra la versión del programa y sale"
+msgstr "Показва версията на програмата и излиза"
+
+#: protonpass_installer.py:234
+msgid "Idiomas disponibles:"
+msgstr "Налични езици"
+
+#: protonpass_installer.py:235
+msgid "Se ha actualizado el idioma a: {}"
+msgstr "Езикът е актуализиран на: {}"
+
+#: protonpass_installer.py:235
+msgid "No se ha podido actualizar el idioma"
+msgstr "Езикът не може да бъде актуализиран"

@@ -1,0 +1,200 @@
+# This file is distributed under the same license as the PACKAGE.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-06 20:46+0200\n"
+"PO-Revision-Date: 2025-09-14 14:23+0200\n"
+"Language-Team: Chinese\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.3\n"
+
+#: protonpass_installer.py:58
+#, python-brace-format
+msgid "{} Advertencia: No se han podido limpiar los archivos temporales: {}"
+msgstr "{} 警告：无法清理临时文件：{}"
+
+#: protonpass_installer.py:63
+msgid "{} Obteniendo la información de las versiones..."
+msgstr "{} 正在获取版本信息..."
+
+#: protonpass_installer.py:74
+#, python-brace-format
+msgid "La versión {} no se ha encontrado en el JSON"
+msgstr "未在 JSON 中找到版本 {}"
+
+#: protonpass_installer.py:77
+#, python-brace-format
+msgid "Error al obtener la información de las versiones: {}"
+msgstr "获取版本信息时出错：{}"
+
+#: protonpass_installer.py:86
+msgid "No se ha encontrado el archivo {} en la información de la versión"
+msgstr "在版本信息中未找到文件 {}"
+
+#: protonpass_installer.py:96
+#, python-brace-format
+msgid "{} Descargando {}..."
+msgstr "{} 正在下载 {}..."
+
+#: protonpass_installer.py:112
+#, python-brace-format
+msgid "{} Progreso: {percent:.1f}%"
+msgstr "{} 进度：{percent:.1f}%"
+
+#: protonpass_installer.py:113
+#, python-brace-format
+msgid "{} Descarga finalizada: {}"
+msgstr "{} 下载完成：{}"
+
+#: protonpass_installer.py:117
+#, python-brace-format
+msgid "Error al descargar el archivo: {}"
+msgstr "下载文件出错：{}"
+
+#: protonpass_installer.py:121
+msgid "{} Calculando la suma de verificación (SHA512)..."
+msgstr "{} 正在计算校验和（SHA512）..."
+
+#: protonpass_installer.py:134
+#, python-brace-format
+msgid "{} Suma de verificación esperada: {}"
+msgstr "{} 预期校验和：{}"
+
+#: protonpass_installer.py:135
+#, python-brace-format
+msgid "{} Suma de verificación calculada: {}"
+msgstr "{} 计算的校验和：{}"
+
+#: protonpass_installer.py:140
+msgid "{} Instalando ProtonPass..."
+msgstr "{} 正在安装 ProtonPass..."
+
+#: protonpass_installer.py:148
+msgid "{} Error: Se requieren permisos de superusuario para instalar el paquete"
+msgstr "{} 错误：需要超级用户权限才能安装此软件包"
+
+#: protonpass_installer.py:161
+msgid "{} ProtonPass se ha instalado correctamente"
+msgstr "{} ProtonPass 安装成功"
+
+#: protonpass_installer.py:164
+msgid "{} Error durante la instalación:"
+msgstr "{} 安装过程中出错："
+
+#: protonpass_installer.py:168
+msgid "{} Intentando resolver las dependencias..."
+msgstr "{} 正在尝试解决依赖关系..."
+
+#: protonpass_installer.py:176
+msgid "{} Dependencias resueltas, ProtonPass se ha instalado correctamente"
+msgstr "{} 依赖已解决，ProtonPass 安装成功"
+
+#: protonpass_installer.py:179
+msgid "{} No se pudieron resolver las dependencias automáticamente"
+msgstr "{} 无法自动解决依赖关系"
+
+#: protonpass_installer.py:183
+#, python-brace-format
+msgid "{} Error al ejecutar dpkg: {}"
+msgstr "{} 执行 dpkg 时出错：{}"
+
+#: protonpass_installer.py:189
+#, python-brace-format
+msgid "{} Iniciando la instalación de ProtonPass v{}"
+msgstr "{} 开始安装 ProtonPass v{}"
+
+#: protonpass_installer.py:192
+msgid "{} Se ha obtenido la información de la versión"
+msgstr "{} 已获取版本信息"
+
+#: protonpass_installer.py:200
+msgid "{} ¡AVISO! La suma de verificación no coincide."
+msgstr "{} 警告！校验和不匹配。"
+
+#: protonpass_installer.py:201
+msgid " El archivo descargado podría estar corrupto o comprometido."
+msgstr " 下载的文件可能已损坏或被篡改。"
+
+#: protonpass_installer.py:202
+msgid " Por seguridad, no se procederá con la instalación."
+msgstr " 出于安全考虑，将不会继续安装。"
+
+#: protonpass_installer.py:205
+msgid "{} La suma de verificación coincide"
+msgstr "{} 校验和匹配"
+
+#: protonpass_installer.py:212
+#, python-brace-format
+msgid "{} Se ha producido un error durante el proceso: {}"
+msgstr "{} 过程中发生错误：{}"
+
+#: protonpass_installer.py:219
+msgid "Descarga, verifica e instala ProtonPass automáticamente"
+msgstr "自动下载、验证并安装 ProtonPass"
+
+#: protonpass_installer.py:220
+msgid "Ejemplo: python3 protonpass_installer.py 1.32.5"
+msgstr "示例：python3 protonpass_installer.py 1.32.5"
+
+#: protonpass_installer.py:225
+msgid "Versión de ProtonPass a instalar (por ejemplo: 1.32.5)"
+msgstr "要安装的 ProtonPass 版本（例如：1.32.5）"
+
+#: protonpass_installer.py:231
+msgid "Únicamente descarga y verifica, no instala"
+msgstr "只下载和验证，不安装"
+
+#: protonpass_installer.py:237
+msgid "{} Este «script» está diseñado para sistemas basados en Debian/Ubuntu"
+msgstr "{} 此脚本适用于基于 Debian/Ubuntu 的系统"
+
+#: protonpass_installer.py:243
+msgid "{} Error: No se puede conectar a internet"
+msgstr "{} 错误：无法连接到互联网"
+
+#: protonpass_installer.py:249
+msgid "{} Se activa el modo de verificación, no se instalará la aplicación"
+msgstr "{} 已启用仅验证模式，不会安装应用程序"
+
+#: protonpass_installer.py:256
+msgid "{} ¡ProtonPass se ha instalado correctamente!"
+msgstr "{} ProtonPass 安装成功！"
+
+#: protonpass_installer.py:257
+msgid " Puedes encontrarlo en el menú de aplicaciones o ejecutar 'proton-pass'"
+msgstr " 可以在应用菜单中找到它，或运行 'proton-pass'"
+
+#: protonpass_installer.py:260
+msgid "{} Ha fallado la instalación. Revisa los errores anteriores."
+msgstr "{} 安装失败。请检查上述错误。"
+
+#: protonpass_installer.py:232
+msgid "Muestra los idiomas disponibles y sale"
+msgstr "显示可用语言并退出"
+
+#: protonpass_installer.py:233
+msgid "Establece el idioma de la aplicación (por ejemplo: -l es) y sale"
+msgstr "设置应用程序的语言（例如：-l es）并退出"
+
+#: protonpass_installer.py:234
+msgid "Muestra la versión del programa y sale"
+msgstr "显示程序版本并退出"
+
+#: protonpass_installer.py:234
+msgid "Idiomas disponibles"
+msgstr "可用语言"
+
+#: protonpass_installer.py:235
+msgid "Se ha actualizado el idioma a: {}"
+msgstr "语言已更新为：{}"
+
+#: protonpass_installer.py:235
+msgid "No se ha podido actualizar el idioma"
+msgstr "无法更新语言"
