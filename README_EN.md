@@ -1,11 +1,11 @@
 # protonpass-installer
 
-![Status](https://img.shields.io/badge/Status-Estable-yellow?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Stable-yellow?style=for-the-badge)
 ![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)
 ![License](https://img.shields.io/badge/Licence-GPL_v3-blue.svg?style=for-the-badge)
 
-🇺🇸 English | [🇪🇸 Versión en Español](README.md)
+🇺🇸 English | [🇪🇸 Versión en español](README.md)
 
 ## 📋 Description
 
@@ -28,12 +28,12 @@ Automatically download, verify, and install ProtonPass in Debian/Ubuntu
 
 ## 📦 Installing dependencies
 
-```python
+```
     pip install -r requirements.txt
 ```
 
 ## 🚀 Use
-```python
+```
 usage: protonpass_installer.py [-h] [-n] [-f] [-ll | -l LANGUAGE | -v] [version]
 
 Automatically download, verify, and install ProtonPass
@@ -56,7 +56,7 @@ options:
 ```
 For example: 
 * **Install a specific version :**
-```python
+```
 python3 protonpass_installer.py 1.32.6
 
 🚀 Starting installation of ProtonPass v1.32.6
@@ -78,7 +78,7 @@ python3 protonpass_installer.py 1.32.6
 
 ```
 * **Verify a specific version :**
-```python
+```
 python3 protonpass_installer.py 1.32.6 -n
 
 🔍 verify-only mode enabled
