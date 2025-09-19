@@ -13,14 +13,14 @@ import sys
 import tempfile
 import requests
 import gettext
+import locale
 
-from typing import Dict,  Tuple, Callable
+from typing import Dict, Tuple, Callable
 from pathlib import Path
 from dotenv import load_dotenv
 
 
 class ProtonPassInstaller:
-
     BASE_URL = "https://proton.me/download/PassDesktop/linux/x64"
     VERSION_URL = f"{BASE_URL}/version.json"
 
@@ -31,7 +31,6 @@ class ProtonPassInstaller:
         self.file = None
         self.expected_checksum = None
         self.env = self.get_environment()
-
 
     def __enter__(self):
         __version__ = self.get_installed_version(self.env)
@@ -49,8 +48,7 @@ class ProtonPassInstaller:
             if os.path.exists(self.temp_dir):
                 os.rmdir(self.temp_dir)
         except OSError as e:
-            print(_("{} Advertencia: No se han podido limpiar los archivos temporales: {}").format("⚠️",str(e)))
-
+            print(_("{} Advertencia: No se han podido limpiar los archivos temporales: {}").format("⚠️", str(e)))
 
     def _get_version_info(self) -> Dict:
 
@@ -71,7 +69,7 @@ class ProtonPassInstaller:
         except requests.RequestException as e:
             raise requests.RequestException(_("Error al obtener la información de las versiones: {}").format(e))
 
-    def _get_deb_info(self, release_info: Dict, ext = ".deb") -> Tuple[str, str]:
+    def _get_deb_info(self, release_info: Dict, ext=".deb") -> Tuple[str, str]:
 
         files = release_info.get("File", [])
         for file_info in files:
@@ -85,7 +83,7 @@ class ProtonPassInstaller:
         filename = os.path.basename(url)
         file_path = os.path.join(self.temp_dir, filename)
 
-        print(_("{} Descargando {}...").format("⬇️",filename))
+        print(_("{} Descargando {}...").format("⬇️", filename))
 
         try:
             response = requests.get(url, timeout=60, stream=True)
@@ -100,8 +98,9 @@ class ProtonPassInstaller:
                         downloaded += len(chunk)
                         if total_size > 0:
                             percent = (downloaded / total_size) * 100
-                            print("\r"+_("{} Progreso: {percent:.1f}%").format("📊",percent=percent), end="", flush=True)
-            print("\n"+_("{} Descarga finalizada: {}").format("✅",file_path))
+                            print("\r" + _("{} Progreso: {percent:.1f}%").format("📊", percent=percent), end="",
+                                  flush=True)
+            print("\n" + _("{} Descarga finalizada: {}").format("✅", file_path))
             return file_path
 
         except requests.RequestException as e:
@@ -122,63 +121,78 @@ class ProtonPassInstaller:
 
         calculated_checksum = self._calculate_sha512(file_path)
 
-        print(_("{} Suma de verificación esperada:  {}").format("🔍",expected_checksum))
-        print(_("{} Suma de verificación calculada: {}").format("🔍",calculated_checksum))
+        print(_("{} Suma de verificación esperada:  {}").format("🔍", expected_checksum))
+        print(_("{} Suma de verificación calculada: {}").format("🔍", calculated_checksum))
 
         return calculated_checksum.lower() == expected_checksum.lower()
 
-    def _install_deb(self, file_path: str) -> bool:
+    def _install_deb(self, file_path: str, force_deps: bool = False) -> bool:
 
         print(_("{} Instalando ProtonPass...").format("📦"))
 
-        try:
-            # Verificar si el usuario tiene permisos sudo
-            subprocess.run(['sudo', '-n', 'true'], check=True, 
-                          capture_output=True, text=True)
-        except subprocess.CalledProcessError:
-            print(_("{} Error: Se requieren permisos de superusuario para instalar el paquete").format("❌"))
+        result = self._run_dpkg_install(file_path)
+
+        if result.returncode == 0:
+            print(_("{} ProtonPass se ha instalado correctamente").format("✅"))
+            return True
+        elif force_deps:
+            print(_("{} Intentando resolver las dependencias...").format("🔧"))
+            return self._handle_dependency_issues(file_path)
+
+        print(_("{} Error durante la instalación:").format("❌"))
+        print(result.stderr)
+        return False
+
+    def _run_dpkg_install(self, file_path: str) -> subprocess.CompletedProcess:
+
+        return subprocess.run(
+            ['sudo', 'dpkg', '-i', file_path],
+            capture_output=True,
+            text=True,
+            check=False
+        )
+
+    def _handle_dependency_issues(self, file_path: str) -> bool:
+
+        # Obtener las dependencias del paquete
+        depends_cmd = ['dpkg-deb', '-f', file_path, 'Depends']
+        deps_result = subprocess.run(depends_cmd, capture_output=True, text=True)
+
+        if deps_result.returncode != 0:
+            print(_("{} No se pudieron obtener las dependencias del paquete").format("❌"))
             return False
 
-        try:
-            # Instalar el paquete
-            result = subprocess.run(
-                ['sudo', 'dpkg', '-i', file_path],
-                capture_output=True,
-                text=True,
-                check=False
-            )
+        # Instalar dependencias
+        deps = deps_result.stdout.strip().replace(' ', '').split(',')
+        dep_result = subprocess.run(
+            ['sudo', 'apt-get', 'install', '-y'] + deps,
+            capture_output=True,
+            text=True
+        )
 
-            if result.returncode == 0:
-                print(_("{} ProtonPass se ha instalado correctamente").format("✅"))
-                return True
-            else:
-                print(_("{} Error durante la instalación:").format("❌"))
-                print(result.stderr)
-
-                # Se intenta resolver dependencias si fuera necesario
-                print(_("{} Intentando resolver las dependencias...").format("🔧"))
-                dep_result = subprocess.run(
-                    ['sudo', 'apt-get', 'install', '-f', '-y'],
-                    capture_output=True,
-                    text=True
-                )
-
-                if dep_result.returncode == 0:
-                    print(_("{} Dependencias resueltas, ProtonPass se ha instalado correctamente").format("✅"))
-                    return True
-                else:
-                    print(_("{} No se pudieron resolver las dependencias automáticamente").format("❌"))
-                    return False
-
-        except subprocess.CalledProcessError as e:
-            print(_("{} Error al ejecutar dpkg: {}").format("❌",str(e)))
+        if dep_result.returncode != 0:
+            print(dep_result.stderr)
+            print(_("{} No se pudieron resolver las dependencias automáticamente").format("❌"))
             return False
 
-    def install(self, instalar = True) -> bool:
+        print(_("{} Dependencias resueltas").format("✅"))
+        print(_("{} Instalando ProtonPass...").format("📦"))
+
+        result = self._run_dpkg_install(file_path)
+
+        if result.returncode == 0:
+            print(_("{} ProtonPass se ha instalado correctamente").format("✅"))
+            return True
+
+        print(_("{} Error durante la instalación:").format("❌"))
+        print(result.stderr)
+        return False
+
+    def install(self, instalar=True, force_deps=False) -> bool:
 
         try:
             if instalar:
-                print(_("{} Iniciando la instalación de ProtonPass v{}").format("🚀",self.version))
+                print(_("{} Iniciando la instalación de ProtonPass v{}").format("🚀", self.version))
 
             version_info = self._get_version_info()
             print(_("{} Se ha obtenido la información de la versión").format("✅"))
@@ -198,14 +212,14 @@ class ProtonPassInstaller:
             if not instalar:
                 return True
 
-            return self._install_deb(self.file)
+            return self._install_deb(self.file, force_deps)
 
         except Exception as e:
-            print(_("{} Se ha producido un error durante el proceso: {}").format("❌",str(e)))
+            print(_("{} Se ha producido un error durante el proceso: {}").format("❌", str(e)))
             return False
 
     @staticmethod
-    def get_environment()-> dict:
+    def get_environment() -> dict:
 
         base_path = Path(__file__).parent
         base_locale_path = base_path
@@ -219,8 +233,8 @@ class ProtonPassInstaller:
 
         if is_deb or is_pyinstaller:
             config_home = Path(os.environ.get('XDG_CONFIG_HOME', '~/.config')).expanduser()
-            base_path = config_home / 'mlogicial'/ 'protonpass_installer'
-            base_locale_path = Path.home() / '.local' / 'share' / 'mlogicial'/ 'protonpass_installer'
+            base_path = config_home / 'mlogicial' / 'protonpass_installer'
+            base_locale_path = Path.home() / '.local' / 'share' / 'mlogicial' / 'protonpass_installer'
             if is_pyinstaller:
                 base_locale_path = Path(sys._MEIPASS)
 
@@ -228,7 +242,7 @@ class ProtonPassInstaller:
             'is_deb': is_deb,
             'is_pyinstaller': is_pyinstaller,
             'is_system': is_deb,
-            'env_type': 'deb' if is_deb else 'pyinstaller' if is_pyinstaller else  'source',
+            'env_type': 'deb' if is_deb else 'pyinstaller' if is_pyinstaller else 'source',
             'base_path': base_path,
             'base_locale_path': base_locale_path
         }
@@ -238,14 +252,31 @@ class ProtonPassInstaller:
 
         if not os.path.exists(env_path):
             env_path.parent.mkdir(parents=True, exist_ok=True)
-            language = os.environ.get('LANG', 'es').split('_')[0]
+            locale.setlocale(locale.LC_ALL, '')
+            lang_info = locale.getlocale()
+            language = lang_info[0] if lang_info and lang_info[0] else 'es'
             with open(env_path, 'w') as f:
                 f.write("# Archivo de configuración de idioma\n")
                 f.write("IDIOMA=" + language + "\n")
-            print("Se ha creado el archivo con los valores por defecto.",env_path)
+            print("Se ha creado el archivo con los valores por defecto.", env_path)
 
     @staticmethod
-    def get_installed_version(env = None) -> str:
+    def check_sudo_permissions() -> bool:
+
+        try:
+            subprocess.run(
+                ['sudo', '-n', 'true'],
+                check=True,
+                capture_output=True,
+                text=True
+            )
+            return True
+        except subprocess.CalledProcessError:
+            print(_("{} Error: Se requieren permisos de superusuario para instalar el paquete").format("❌"))
+            return False
+
+    @staticmethod
+    def get_installed_version(env=None) -> str:
 
         try:
             if env is None:
@@ -268,7 +299,7 @@ class ProtonPassInstaller:
             return []
 
     @staticmethod
-    def set_language(lang:str) -> bool:
+    def set_language(lang: str) -> bool:
         available_langs = ProtonPassInstaller.get_languages()
         available_langs.append("es")
 
@@ -301,6 +332,7 @@ class ProtonPassInstaller:
             print(f"No se ha podido actualizar el idioma: {e}", file=sys.stderr)
             return False
 
+
 def validate() -> bool:
     if not os.path.exists('/etc/debian_version'):
         print(_("{} Este «script» está diseñado para sistemas basados en Debian/Ubuntu").format("❌"))
@@ -315,7 +347,6 @@ def validate() -> bool:
 
 
 def load_conf() -> Callable[[str], str]:
-
     env = ProtonPassInstaller.get_environment()
     ProtonPassInstaller.make_env_file(env['base_path'] / ".env")
     load_dotenv(dotenv_path=env['base_path'] / '.env', override=True)
@@ -326,7 +357,6 @@ def load_conf() -> Callable[[str], str]:
 
 
 def main():
-
     parser = argparse.ArgumentParser(
         description=_("Descarga, verifica e instala ProtonPass automáticamente"),
         epilog=_("Ejemplo: python3 protonpass_installer.py 1.32.5")
@@ -339,15 +369,21 @@ def main():
     )
 
     parser.add_argument(
-        '-n','--no-install',
+        '-n', '--no-install',
         action='store_true',
         help=_('Únicamente descarga y verifica, no instala')
+    )
+
+    parser.add_argument(
+        '-f', '--force-deps',
+        action='store_true',
+        help=_('Forzar la instalación de dependencias')
     )
 
     group = parser.add_mutually_exclusive_group()
 
     group.add_argument(
-        '-ll','--list-languages',
+        '-ll', '--list-languages',
         action='store_true',
         help=_('Muestra los idiomas disponibles y sale')
     )
@@ -367,7 +403,7 @@ def main():
     args = parser.parse_args()
 
     if args.list_languages:
-        print(_("Idiomas disponibles")+":")
+        print(_("Idiomas disponibles") + ":")
         print("  es")
         for lang in sorted(ProtonPassInstaller.get_languages()):
             print(f"  {lang}")
@@ -387,19 +423,27 @@ def main():
 
     # Instalar ProtonPass
     with ProtonPassInstaller(args.version) as installer:
+
+        success = False
+
         if args.no_install:
             print(_("{} Se activa el modo de verificación, no se instalará la aplicación").format('🔍'))
             installer.install(False)
             sys.exit(0)
 
-        success = installer.install()
+        if ProtonPassInstaller.check_sudo_permissions():
+            success = installer.install(True, args.force_deps)
 
         if success:
-            print("\n"+_("{} ¡ProtonPass se ha instalado correctamente!").format("🎉"))
+            print("\n" + _("{} ¡ProtonPass se ha instalado correctamente!").format("🎉"))
             print(_("   Puedes encontrarlo en el menú de aplicaciones o ejecutar 'proton-pass'"))
             sys.exit(0)
         else:
-            print("\n"+_("{} Ha fallado la instalación. Revisa los errores anteriores.").format("💥"))
+            print("\n" + _("{} Ha fallado la instalación. Revisa los errores anteriores.").format("💥"))
+            if not args.force_deps:
+                print(
+                    _("{} Si el error es por dependencias, para forzar su instalación usa el parámetro -f").format("💡"))
+                print(_("Por ejemplo: {} -f").format(' '.join(sys.argv)))
             sys.exit(1)
 
 
