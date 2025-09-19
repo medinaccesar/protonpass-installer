@@ -138,13 +138,13 @@ When first run, the script:
    ```
 ## 📄 License
 
-This project is licensed under GPL v3. See the [LICENSE(LICENSE)] file for more details.
+This project is licensed under GPL v3. See the [LICENSE](LICENSE) file for more details.
 
 ## 🆘 Support
 
 If you find any errors or have suggestions or questions:
    
-1. 📧 Open a [issue(https://github.com/medinaccesar/protonpass-installer/issues)]
+1. 📧 Open a [issue](https://github.com/medinaccesar/protonpass-installer/issues)
 
 ## Future plans
 1. ✅ Support rpm (Fedora/RHEL)
