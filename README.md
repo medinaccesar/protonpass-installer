@@ -58,7 +58,7 @@ Por ejemplo:
 ```
 python3 protonpass_installer.py 1.32.6
 
-🔍 Se activa el modo de verificación, no se instalará la aplicación
+🚀 Iniciando la instalación de ProtonPass 1.32.6
 🔍 Obteniendo la información de las versiones...
 ✅ Se ha obtenido la información de la versión
 ⬇️ Descargando proton-pass_1.32.6_amd64.deb...
