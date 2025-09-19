@@ -1,0 +1,134 @@
+msgid "{} Advertencia: No se han podido limpiar los archivos temporales: {}"
+msgstr "{} Avertisment: Nu s-au putut curăța fișierele temporare: {}"
+
+msgid "{} Obteniendo la información de las versiones..."
+msgstr "{} Se obține informația despre versiuni..."
+
+msgid "La versión {} no se ha encontrado en el JSON"
+msgstr "Versiunea {} nu a fost găsită în JSON"
+
+msgid "Error al obtener la información de las versiones: {}"
+msgstr "Eroare la obținerea informației despre versiuni: {}"
+
+msgid "No se ha encontrado el archivo {} en la información de la versión"
+msgstr "Fișierul {} nu a fost găsit în informațiile despre versiune"
+
+msgid "{} Descargando {}..."
+msgstr "{} Se descarcă {}..."
+
+msgid "{} Progreso: {percent:.1f}%"
+msgstr "{} Progres: {percent:.1f}%"
+
+msgid "{} Descarga finalizada: {}"
+msgstr "{} Descărcare finalizată: {}"
+
+msgid "Error al descargar el archivo: {}"
+msgstr "Eroare la descărcarea fișierului: {}"
+
+msgid "{} Calculando la suma de verificación (SHA512)..."
+msgstr "{} Se calculează suma de verificare (SHA512)..."
+
+msgid "{} Suma de verificación esperada: {}"
+msgstr "{} Suma de verificare așteptată: {}"
+
+msgid "{} Suma de verificación calculada: {}"
+msgstr "{} Suma de verificare calculată: {}"
+
+msgid "{} Instalando ProtonPass..."
+msgstr "{} Se instalează ProtonPass..."
+
+msgid "{} Error: Se requieren permisos de superusuario para instalar el paquete"
+msgstr "{} Eroare: Sunt necesare permisiuni de superutilizator pentru instalarea pachetului"
+
+msgid "{} ProtonPass se ha instalado correctamente"
+msgstr "{} ProtonPass a fost instalat cu succes"
+
+msgid "{} Error durante la instalación:"
+msgstr "{} Eroare în timpul instalării:"
+
+msgid "{} Intentando resolver las dependencias..."
+msgstr "{} Se încearcă rezolvarea dependențelor..."
+
+msgid "{} Dependencias resueltas, ProtonPass se ha instalado correctamente"
+msgstr "{} Dependențe rezolvate, ProtonPass s-a instalat cu succes"
+
+msgid "{} No se pudieron resolver las dependencias automáticamente"
+msgstr "{} Nu s-au putut rezolva automat dependențele"
+
+msgid "{} Error al ejecutar dpkg: {}"
+msgstr "{} Eroare la rularea dpkg: {}"
+
+msgid "{} Iniciando la instalación de ProtonPass v{}"
+msgstr "{} Începe instalarea ProtonPass v{}"
+
+msgid "{} Se ha obtenido la información de la versión"
+msgstr "{} S-au obținut informațiile despre versiune"
+
+msgid "{} ¡AVISO! La suma de verificación no coincide."
+msgstr "{} AVERTISMENT! Suma de verificare nu corespunde."
+
+msgid " El archivo descargado podría estar corrupto o comprometido."
+msgstr " Fișierul descărcat poate fi corupt sau compromis."
+
+msgid " Por seguridad, no se procederá con la instalación."
+msgstr " Din motive de securitate, instalarea nu va continua."
+
+msgid "{} La suma de verificación coincide"
+msgstr "{} Suma de verificare corespunde"
+
+msgid "{} Se ha producido un error durante el proceso: {}"
+msgstr "{} A apărut o eroare în timpul procesului: {}"
+
+msgid "Descarga, verifica e instala ProtonPass automáticamente"
+msgstr "Descarcă, verifică și instalează ProtonPass automat"
+
+msgid "Ejemplo: python3 protonpass_installer.py 1.32.5"
+msgstr "Exemplu: python3 protonpass_installer.py 1.32.5"
+
+msgid "Versión de ProtonPass a instalar (por ejemplo: 1.32.5)"
+msgstr "Versiunea ProtonPass de instalat (de exemplu: 1.32.5)"
+
+msgid "Únicamente descarga y verifica, no instala"
+msgstr "Doar descarcă și verifică, nu instalează"
+
+msgid "{} Este «script» está diseñado para sistemas basados en Debian/Ubuntu"
+msgstr "{} Acest script este conceput pentru sisteme bazate pe Debian/Ubuntu"
+
+msgid "{} Error: No se puede conectar a internet"
+msgstr "{} Eroare: Nu se poate conecta la internet"
+
+msgid "{} Se activa el modo de verificación, no se instalará la aplicación"
+msgstr "{} Modul doar verificare este activat, aplicația nu va fi instalată"
+
+msgid "{} ¡ProtonPass se ha instalado correctamente!"
+msgstr "{} ProtonPass a fost instalat cu succes!"
+
+msgid " Puedes encontrarlo en el menú de aplicaciones o ejecutar 'proton-pass'"
+msgstr " Îl poți găsi în meniul de aplicații sau rula 'proton-pass'"
+
+msgid "{} Ha fallado la instalación. Revisa los errores anteriores."
+msgstr "{} Instalarea a eșuat. Verifică erorile anterioare."
+
+#: protonpass_installer.py:232
+msgid "Muestra los idiomas disponibles y sale"
+msgstr "Afișează limbile disponibile și iese"
+
+#: protonpass_installer.py:233
+msgid "Establece el idioma de la aplicación (por ejemplo: -l es) y sale"
+msgstr "Setează limba aplicației (de exemplu: -l es) și iese"
+
+#: protonpass_installer.py:234
+msgid "Muestra la versión del programa y sale"
+msgstr "Afișează versiunea programului și iese"
+
+#: protonpass_installer.py:234
+msgid "Idiomas disponibles"
+msgstr "Limbi disponibile"
+
+#: protonpass_installer.py:235
+msgid "Se ha actualizado el idioma a: {}"
+msgstr "Limba a fost actualizată la: {}"
+
+#: protonpass_installer.py:235
+msgid "No se ha podido actualizar el idioma"
+msgstr "Nu s-a putut actualiza limba"

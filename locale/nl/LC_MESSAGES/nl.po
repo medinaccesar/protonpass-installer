@@ -1,0 +1,134 @@
+msgid "{} Advertencia: No se han podido limpiar los archivos temporales: {}"
+msgstr "{} Waarschuwing: Kon tijdelijke bestanden niet opruimen: {}"
+
+msgid "{} Obteniendo la información de las versiones..."
+msgstr "{} Versie-informatie ophalen..."
+
+msgid "La versión {} no se ha encontrado en el JSON"
+msgstr "Versie {} niet gevonden in JSON"
+
+msgid "Error al obtener la información de las versiones: {}"
+msgstr "Fout bij ophalen van versie-informatie: {}"
+
+msgid "No se ha encontrado el archivo {} en la información de la versión"
+msgstr "Bestand {} niet gevonden in versie-informatie"
+
+msgid "{} Descargando {}..."
+msgstr "{} {} wordt gedownload..."
+
+msgid "{} Progreso: {percent:.1f}%"
+msgstr "{} Voortgang: {percent:.1f}%"
+
+msgid "{} Descarga finalizada: {}"
+msgstr "{} Download voltooid: {}"
+
+msgid "Error al descargar el archivo: {}"
+msgstr "Fout bij downloaden van bestand: {}"
+
+msgid "{} Calculando la suma de verificación (SHA512)..."
+msgstr "{} Controlegetal (SHA512) berekenen..."
+
+msgid "{} Suma de verificación esperada: {}"
+msgstr "{} Verwachte controlegetal: {}"
+
+msgid "{} Suma de verificación calculada: {}"
+msgstr "{} Berekende controlegetal: {}"
+
+msgid "{} Instalando ProtonPass..."
+msgstr "{} ProtonPass wordt geïnstalleerd..."
+
+msgid "{} Error: Se requieren permisos de superusuario para instalar el paquete"
+msgstr "{} Fout: root-rechten zijn vereist om het pakket te installeren"
+
+msgid "{} ProtonPass se ha instalado correctamente"
+msgstr "{} ProtonPass is succesvol geïnstalleerd"
+
+msgid "{} Error durante la instalación:"
+msgstr "{} Fout tijdens installatie:"
+
+msgid "{} Intentando resolver las dependencias..."
+msgstr "{} Proberen afhankelijkheden op te lossen..."
+
+msgid "{} Dependencias resueltas, ProtonPass se ha instalado correctamente"
+msgstr "{} Afhankelijkheden opgelost, ProtonPass is succesvol geïnstalleerd"
+
+msgid "{} No se pudieron resolver las dependencias automáticamente"
+msgstr "{} Afhankelijkheden konden niet automatisch worden opgelost"
+
+msgid "{} Error al ejecutar dpkg: {}"
+msgstr "{} Fout tijdens uitvoeren van dpkg: {}"
+
+msgid "{} Iniciando la instalación de ProtonPass v{}"
+msgstr "{} Installatie van ProtonPass v{} wordt gestart"
+
+msgid "{} Se ha obtenido la información de la versión"
+msgstr "{} Versie-informatie verkregen"
+
+msgid "{} ¡AVISO! La suma de verificación no coincide."
+msgstr "{} WAARSCHUWING! Controlegetal komt niet overeen."
+
+msgid " El archivo descargado podría estar corrupto o comprometido."
+msgstr " Het gedownloade bestand kan beschadigd of aangetast zijn."
+
+msgid " Por seguridad, no se procederá con la instalación."
+msgstr " Om veiligheidsredenen wordt de installatie niet voortgezet."
+
+msgid "{} La suma de verificación coincide"
+msgstr "{} Controlegetal komt overeen"
+
+msgid "{} Se ha producido un error durante el proceso: {}"
+msgstr "{} Er is een fout opgetreden tijdens het proces: {}"
+
+msgid "Descarga, verifica e instala ProtonPass automáticamente"
+msgstr "Download, verifieer en installeer ProtonPass automatisch"
+
+msgid "Ejemplo: python3 protonpass_installer.py 1.32.5"
+msgstr "Voorbeeld: python3 protonpass_installer.py 1.32.5"
+
+msgid "Versión de ProtonPass a instalar (por ejemplo: 1.32.5)"
+msgstr "ProtonPass-versie om te installeren (bijv.: 1.32.5)"
+
+msgid "Únicamente descarga y verifica, no instala"
+msgstr "Alleen downloaden en verifiëren, niet installeren"
+
+msgid "{} Este «script» está diseñado para sistemas basados en Debian/Ubuntu"
+msgstr "{} Dit script is ontworpen voor Debian/Ubuntu-systemen"
+
+msgid "{} Error: No se puede conectar a internet"
+msgstr "{} Fout: Kan geen verbinding maken met het internet"
+
+msgid "{} Se activa el modo de verificación, no se instalará la aplicación"
+msgstr "{} Alleen-verificatiemodus geactiveerd, de applicatie wordt niet geïnstalleerd"
+
+msgid "{} ¡ProtonPass se ha instalado correctamente!"
+msgstr "{} ProtonPass is succesvol geïnstalleerd!"
+
+msgid " Puedes encontrarlo en el menú de aplicaciones o ejecutar 'proton-pass'"
+msgstr " U kunt het vinden in het applicatiemenu of 'proton-pass' uitvoeren"
+
+msgid "{} Ha fallado la instalación. Revisa los errores anteriores."
+msgstr "{} Installatie mislukt. Controleer de voorgaande fouten."
+
+#: protonpass_installer.py:232
+msgid "Muestra los idiomas disponibles y sale"
+msgstr "Toont de beschikbare talen en sluit af"
+
+#: protonpass_installer.py:233
+msgid "Establece el idioma de la aplicación (por ejemplo: -l es) y sale"
+msgstr "Stel de taal van de applicatie in (bijvoorbeeld: -l es) en sluit af"
+
+#: protonpass_installer.py:234
+msgid "Muestra la versión del programa y sale"
+msgstr "Toont de versie van het programma en sluit af"
+
+#: protonpass_installer.py:234
+msgid "Idiomas disponibles"
+msgstr "Beschikbare talen"
+
+#: protonpass_installer.py:235
+msgid "Se ha actualizado el idioma a: {}"
+msgstr "De taal is bijgewerkt naar: {}"
+
+#: protonpass_installer.py:235
+msgid "No se ha podido actualizar el idioma"
+msgstr "De taal kon niet worden bijgewerkt"

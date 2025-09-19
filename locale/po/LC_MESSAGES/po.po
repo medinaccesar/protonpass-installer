@@ -1,0 +1,134 @@
+msgid "{} Advertencia: No se han podido limpiar los archivos temporales: {}"
+msgstr "{} Ostrzeżenie: Nie można było wyczyścić plików tymczasowych: {}"
+
+msgid "{} Obteniendo la información de las versiones..."
+msgstr "{} Pobieranie informacji o wersjach..."
+
+msgid "La versión {} no se ha encontrado en el JSON"
+msgstr "Wersja {} nie została znaleziona w pliku JSON"
+
+msgid "Error al obtener la información de las versiones: {}"
+msgstr "Błąd podczas pobierania informacji o wersjach: {}"
+
+msgid "No se ha encontrado el archivo {} en la información de la versión"
+msgstr "Plik {} nie został znaleziony w informacjach o wersji"
+
+msgid "{} Descargando {}..."
+msgstr "{} Pobieranie {}..."
+
+msgid "{} Progreso: {percent:.1f}%"
+msgstr "{} Postęp: {percent:.1f}%"
+
+msgid "{} Descarga finalizada: {}"
+msgstr "{} Pobieranie zakończone: {}"
+
+msgid "Error al descargar el archivo: {}"
+msgstr "Błąd podczas pobierania pliku: {}"
+
+msgid "{} Calculando la suma de verificación (SHA512)..."
+msgstr "{} Obliczanie sumy kontrolnej (SHA512)..."
+
+msgid "{} Suma de verificación esperada: {}"
+msgstr "{} Oczekiwana suma kontrolna: {}"
+
+msgid "{} Suma de verificación calculada: {}"
+msgstr "{} Obliczona suma kontrolna: {}"
+
+msgid "{} Instalando ProtonPass..."
+msgstr "{} Instalowanie ProtonPass..."
+
+msgid "{} Error: Se requieren permisos de superusuario para instalar el paquete"
+msgstr "{} Błąd: Do instalacji pakietu wymagane są uprawnienia administratora"
+
+msgid "{} ProtonPass se ha instalado correctamente"
+msgstr "{} ProtonPass został pomyślnie zainstalowany"
+
+msgid "{} Error durante la instalación:"
+msgstr "{} Błąd podczas instalacji:"
+
+msgid "{} Intentando resolver las dependencias..."
+msgstr "{} Próba rozwiązania zależności..."
+
+msgid "{} Dependencias resueltas, ProtonPass se ha instalado correctamente"
+msgstr "{} Zależności rozwiązane, ProtonPass został pomyślnie zainstalowany"
+
+msgid "{} No se pudieron resolver las dependencias automáticamente"
+msgstr "{} Nie udało się automatycznie rozwiązać zależności"
+
+msgid "{} Error al ejecutar dpkg: {}"
+msgstr "{} Błąd podczas uruchamiania dpkg: {}"
+
+msgid "{} Iniciando la instalación de ProtonPass v{}"
+msgstr "{} Rozpoczynanie instalacji ProtonPass v{}"
+
+msgid "{} Se ha obtenido la información de la versión"
+msgstr "{} Informacje o wersji zostały uzyskane"
+
+msgid "{} ¡AVISO! La suma de verificación no coincide."
+msgstr "{} UWAGA! Suma kontrolna nie zgadza się."
+
+msgid " El archivo descargado podría estar corrupto o comprometido."
+msgstr " Pobrany plik może być uszkodzony lub zmodyfikowany."
+
+msgid " Por seguridad, no se procederá con la instalación."
+msgstr " Ze względów bezpieczeństwa instalacja nie zostanie przeprowadzona."
+
+msgid "{} La suma de verificación coincide"
+msgstr "{} Suma kontrolna się zgadza"
+
+msgid "{} Se ha producido un error durante el proceso: {}"
+msgstr "{} Wystąpił błąd podczas procesu: {}"
+
+msgid "Descarga, verifica e instala ProtonPass automáticamente"
+msgstr "Automatycznie pobierz, zweryfikuj i zainstaluj ProtonPass"
+
+msgid "Ejemplo: python3 protonpass_installer.py 1.32.5"
+msgstr "Przykład: python3 protonpass_installer.py 1.32.5"
+
+msgid "Versión de ProtonPass a instalar (por ejemplo: 1.32.5)"
+msgstr "Wersja ProtonPass do zainstalowania (np.: 1.32.5)"
+
+msgid "Únicamente descarga y verifica, no instala"
+msgstr "Tylko pobierz i zweryfikuj, nie instaluj"
+
+msgid "{} Este «script» está diseñado para sistemas basados en Debian/Ubuntu"
+msgstr "{} Ten skrypt przeznaczony jest dla systemów opartych na Debian/Ubuntu"
+
+msgid "{} Error: No se puede conectar a internet"
+msgstr "{} Błąd: Nie można połączyć się z Internetem"
+
+msgid "{} Se activa el modo de verificación, no se instalará la aplicación"
+msgstr "{} Włączono tryb tylko weryfikacji, aplikacja nie zostanie zainstalowana"
+
+msgid "{} ¡ProtonPass se ha instalado correctamente!"
+msgstr "{} ProtonPass został pomyślnie zainstalowany!"
+
+msgid " Puedes encontrarlo en el menú de aplicaciones o ejecutar 'proton-pass'"
+msgstr " Możesz go znaleźć w menu aplikacji lub uruchomić 'proton-pass'"
+
+msgid "{} Ha fallado la instalación. Revisa los errores anteriores."
+msgstr "{} Instalacja nie powiodła się. Sprawdź wcześniejsze błędy."
+
+#: protonpass_installer.py:232
+msgid "Muestra los idiomas disponibles y sale"
+msgstr "Wyświetla dostępne języki i wychodzi"
+
+#: protonpass_installer.py:233
+msgid "Establece el idioma de la aplicación (por ejemplo: -l es) y sale"
+msgstr "Ustawia język aplikacji (na przykład: -l es) i kończy działanie."
+
+#: protonpass_installer.py:234
+msgid "Muestra la versión del programa y sale"
+msgstr "Wyświetla wersję programu i wychodzi"
+
+#: protonpass_installer.py:234
+msgid "Idiomas disponibles"
+msgstr "Dostępne języki"
+
+#: protonpass_installer.py:235
+msgid "Se ha actualizado el idioma a: {}"
+msgstr "Język został zaktualizowany do: {}"
+
+#: protonpass_installer.py:235
+msgid "No se ha podido actualizar el idioma"
+msgstr "Nie udało się zaktualizować języka"
