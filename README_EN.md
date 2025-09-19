@@ -129,7 +129,7 @@ When first run, the script:
   ```
    python3 protonpass_installer.py -l en
    ```
-### Contribuir con las traducciones
+### Contribute with translations
 1. Edit the .po file in: locales/[language]/LC_MESSAGES/
    If the language does not exist, add it using the same file structure.
 2. Compile the translations:
