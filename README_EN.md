@@ -91,8 +91,24 @@ python3 protonpass_installer.py 1.32.6 -n
 🔍 Expected checksum:   6aacd53738514a29317a0340281120e3171b46233121e26cbf21500d04de82432de4d2ab41522a8fa61df2fa04a860b40ffa3ddc6dba079c53c2ce1b3771c69d
 🔍 Calculated checksum: 6aacd53738514a29317a0340281120e3171b46233121e26cbf21500d04de82432de4d2ab41522a8fa61df2fa04a860b40ffa3ddc6dba079c53c2ce1b3771c69d
 ✅ The checksum matches
-
 ```
+
+## 💻 Installation methods
+* **Manual installation:**
+```bash
+# Copy it to the system
+sudo cp ./protonpass_installer.py /usr/local/bin/protonpass-installer
+# Give it execution permissions
+sudo chmod +x /usr/local/bin/protonpass-installer
+# Now you can run it from any location
+protonpass-installer -h
+```
+* **Other installation methods:**
+
+-**PyInstaller:** You can generate an executable using PyInstaller.
+
+-**.deb package:** You can create an installable package for Debian/Ubuntu-based distributions.
+
 ## 🌍 Internationalitation
 
 The script supports multiple languages using gettext. The translation files are located in the locales/ folder.
