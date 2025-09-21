@@ -95,14 +95,23 @@ python3 protonpass_installer.py 1.32.6 -n
 
 ## 💻 Installation methods
 * **Manual installation:**
-```bash
-# Copy it to the system
-sudo cp ./protonpass_installer.py /usr/local/bin/protonpass-installer
-# Give it execution permissions
-sudo chmod +x /usr/local/bin/protonpass-installer
-# Now you can run it from any location
-protonpass-installer -h
-```
+   - Step 1:
+        ```
+        # Compile languages
+        python3 ./utils/compile_lang.py
+        
+        # Copy them to the system
+        python3 ./utils/copy_lang.py
+        ```
+   - Step 2:
+        ```bash
+        # Copy it to the system
+        sudo cp ./protonpass_installer.py /usr/local/bin/protonpass-installer
+        # Give it execution permissions
+        sudo chmod +x /usr/local/bin/protonpass-installer
+        # Now you can run it from any location
+        protonpass-installer -h
+        ```
 * **Other installation methods:**
 
 -**PyInstaller:** You can generate an executable using PyInstaller.

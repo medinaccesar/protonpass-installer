@@ -2,7 +2,6 @@
 """
 Descarga, verifica e instala ProtonPass automáticamente en Debian/Ubuntu.
 Autor: CésarM
-Versión: 1.0.0
 """
 
 import argparse
@@ -154,7 +153,6 @@ class ProtonPassInstaller:
 
     def _handle_dependency_issues(self, file_path: str) -> bool:
 
-        # Obtener las dependencias del paquete
         depends_cmd = ['dpkg-deb', '-f', file_path, 'Depends']
         deps_result = subprocess.run(depends_cmd, capture_output=True, text=True)
 
@@ -162,7 +160,6 @@ class ProtonPassInstaller:
             print(_("{} No se pudieron obtener las dependencias del paquete").format("❌"))
             return False
 
-        # Instalar dependencias
         deps = deps_result.stdout.strip().replace(' ', '').split(',')
         dep_result = subprocess.run(
             ['sudo', 'apt-get', 'install', '-y'] + deps,
@@ -384,11 +381,6 @@ def main():
 
     group.add_argument(
         '-ll', '--list-languages',
-        action='store_true',
-        help=_('Muestra los idiomas disponibles y sale')
-    )
-    group.add_argument(
-        '-cl', '--copy-languages',
         action='store_true',
         help=_('Muestra los idiomas disponibles y sale')
     )
