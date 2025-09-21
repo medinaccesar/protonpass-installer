@@ -1,7 +1,7 @@
 # protonpass-installer
 
 ![Status](https://img.shields.io/badge/Status-Stable-yellow?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-1.1.0-blue?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)
 ![License](https://img.shields.io/badge/Licence-GPL_v3-blue.svg?style=for-the-badge)
 
