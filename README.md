@@ -108,7 +108,7 @@ python3 protonpass_installer.py -l it
     # Copiarlos en el sistema
     python3 ./utils/copy_lang.py
     ```
-   - Paso 2:
+  - Paso 2:
     ```bash
     # Copiarlo en el sistema
     sudo cp ./protonpass_installer.py /usr/local/bin/protonpass-installer
