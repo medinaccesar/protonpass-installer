@@ -79,7 +79,7 @@ python3 protonpass_installer.py 1.32.6
 ```
 python3 protonpass_installer.py 1.32.6 -n
 
-🔍 Se activa el modo de verificación, no se instalará la aplicación
+✅ Se activa el modo de verificación, no se instalará la aplicación
 🔍 Obteniendo la información de las versiones...
 ✅ Se ha obtenido la información de la versión
 ⬇️ Descargando proton-pass_1.32.6_amd64.deb...
@@ -98,6 +98,31 @@ python3 protonpass_installer.py -ll
 ```
 python3 protonpass_installer.py -l it
 ```
+## 💻 Formas de instalación
+* **Instalación manual :**
+  - Paso 1:
+    ```
+    # Compilar los idiomas
+    python3 ./utils/compile_lang.py
+    
+    # Copiarlos en el sistema
+    python3 ./utils/copy_lang.py
+    ```
+   - Paso 2:
+    ```bash
+    # Copiarlo en el sistema
+    sudo cp ./protonpass_installer.py /usr/local/bin/protonpass-installer
+    # Darle permisos de ejecución
+    sudo chmod +x /usr/local/bin/protonpass-installer
+    # Ahora se puede ejecutar desde cualquier ubicación
+    protonpass-installer -h
+    ```
+* **Otras formas de instalación :**
+
+
+   -**PyInstaller:** Se puede generar un ejecutable usando PyInstaller.
+
+   -**Paquete .deb:** Se puede crear un paquete instalable para distribuciones basadas en Debian/Ubuntu.
 
 ## 🌍 Internacionalización
 

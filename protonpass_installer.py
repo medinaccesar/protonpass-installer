@@ -2,7 +2,6 @@
 """
 Descarga, verifica e instala ProtonPass automáticamente en Debian/Ubuntu.
 Autor: CésarM
-Versión: 1.0.0
 """
 
 import argparse
@@ -154,7 +153,6 @@ class ProtonPassInstaller:
 
     def _handle_dependency_issues(self, file_path: str) -> bool:
 
-        # Obtener las dependencias del paquete
         depends_cmd = ['dpkg-deb', '-f', file_path, 'Depends']
         deps_result = subprocess.run(depends_cmd, capture_output=True, text=True)
 
@@ -162,7 +160,6 @@ class ProtonPassInstaller:
             print(_("{} No se pudieron obtener las dependencias del paquete").format("❌"))
             return False
 
-        # Instalar dependencias
         deps = deps_result.stdout.strip().replace(' ', '').split(',')
         dep_result = subprocess.run(
             ['sudo', 'apt-get', 'install', '-y'] + deps,
@@ -230,8 +227,8 @@ class ProtonPassInstaller:
                 os.path.exists('/.deb_installed') or
                 str(base_path).startswith(('/usr/', '/opt/'))
         )
-
-        if is_deb or is_pyinstaller:
+        is_local_bin = str(Path(__file__).resolve()).startswith('/usr/local/bin/')
+        if is_deb or is_pyinstaller or is_local_bin:
             config_home = Path(os.environ.get('XDG_CONFIG_HOME', '~/.config')).expanduser()
             base_path = config_home / 'mlogicial' / 'protonpass_installer'
             base_locale_path = Path.home() / '.local' / 'share' / 'mlogicial' / 'protonpass_installer'
@@ -242,7 +239,7 @@ class ProtonPassInstaller:
             'is_deb': is_deb,
             'is_pyinstaller': is_pyinstaller,
             'is_system': is_deb,
-            'env_type': 'deb' if is_deb else 'pyinstaller' if is_pyinstaller else 'source',
+            'env_type': 'local_bin' if is_local_bin else 'deb' if is_deb else 'pyinstaller' if is_pyinstaller else 'source',
             'base_path': base_path,
             'base_locale_path': base_locale_path
         }
@@ -427,7 +424,7 @@ def main():
         success = False
 
         if args.no_install:
-            print(_("{} Se activa el modo de verificación, no se instalará la aplicación").format('🔍'))
+            print(_("{} Se activa el modo de verificación, no se instalará la aplicación").format('✅'))
             installer.install(False)
             sys.exit(0)
 
