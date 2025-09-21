@@ -81,7 +81,7 @@ python3 protonpass_installer.py 1.32.6
 ```
 python3 protonpass_installer.py 1.32.6 -n
 
-🔍 verify-only mode enabled
+✅ verify-only mode enabled
 🔍 Retrieving version information...
 ✅ Version information obtained
 ⬇️ Downloading proton-pass_1.32.6_amd64.deb...

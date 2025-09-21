@@ -427,7 +427,7 @@ def main():
         success = False
 
         if args.no_install:
-            print(_("{} Se activa el modo de verificación, no se instalará la aplicación").format('🔍'))
+            print(_("{} Se activa el modo de verificación, no se instalará la aplicación").format('✅'))
             installer.install(False)
             sys.exit(0)
 

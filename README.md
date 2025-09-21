@@ -79,7 +79,7 @@ python3 protonpass_installer.py 1.32.6
 ```
 python3 protonpass_installer.py 1.32.6 -n
 
-🔍 Se activa el modo de verificación, no se instalará la aplicación
+✅ Se activa el modo de verificación, no se instalará la aplicación
 🔍 Obteniendo la información de las versiones...
 ✅ Se ha obtenido la información de la versión
 ⬇️ Descargando proton-pass_1.32.6_amd64.deb...
