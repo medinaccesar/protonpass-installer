@@ -1,0 +1,143 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-06 20:46+0200\n"
+"PO-Revision-Date: 2025-09-06 21:17+0200\n"
+"Language-Team: Greek\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.3\n"
+
+msgid "{} Advertencia: No se han podido limpiar los archivos temporales: {}"
+msgstr "Προειδοποίηση: Δεν ήταν δυνατός ο καθαρισμός των προσωρινών αρχείων: {}"
+
+msgid "{} Obteniendo la información de las versiones..."
+msgstr "{} Λήψη πληροφοριών έκδοσης..."
+
+msgid "La versión {} no se ha encontrado en el JSON"
+msgstr "Η έκδοση {} δεν βρέθηκε στο JSON"
+
+msgid "Error al obtener la información de las versiones: {}"
+msgstr "Σφάλμα κατά τη λήψη των πληροφοριών έκδοσης: {}"
+
+msgid "No se ha encontrado el archivo {} en la información de la versión"
+msgstr "Το αρχείο {} δεν βρέθηκε στις πληροφορίες έκδοσης"
+
+msgid "{} Descargando {}..."
+msgstr "{} Λήψη {}..."
+
+msgid "{} Progreso: {percent:.1f}%"
+msgstr "{} Πρόοδος: {percent:.1f}%"
+
+msgid "{} Descarga finalizada: {}"
+msgstr "{} Η λήψη ολοκληρώθηκε: {}"
+
+msgid "Error al descargar el archivo: {}"
+msgstr "Σφάλμα κατά τη λήψη του αρχείου: {}"
+
+msgid "{} Calculando la suma de verificación (SHA512)..."
+msgstr "{} Υπολογισμός ελέγχου (SHA512)..."
+
+msgid "{} Suma de verificación esperada: {}"
+msgstr "{} Αναμενόμενο άθροισμα ελέγχου: {}"
+
+msgid "{} Suma de verificación calculada: {}"
+msgstr "{} Υπολογισμένο άθροισμα ελέγχου: {}"
+
+msgid "{} Instalando ProtonPass..."
+msgstr "{} Εγκατάσταση ProtonPass..."
+
+msgid "{} Error: Se requieren permisos de superusuario para instalar el paquete"
+msgstr "{} Σφάλμα: Απαιτούνται δικαιώματα υπερχρήστη για την εγκατάσταση του πακέτου"
+
+msgid "{} ProtonPass se ha instalado correctamente"
+msgstr "{} Το ProtonPass εγκαταστάθηκε με επιτυχία"
+
+msgid "{} Error durante la instalación:"
+msgstr "{} Σφάλμα κατά την εγκατάσταση:"
+
+msgid "{} Intentando resolver las dependencias..."
+msgstr "{} Γίνεται προσπάθεια επίλυσης εξαρτήσεων..."
+
+msgid "{} Dependencias resueltas, ProtonPass se ha instalado correctamente"
+msgstr "{} Οι εξαρτήσεις επιλύθηκαν, το ProtonPass εγκαταστάθηκε με επιτυχία"
+
+msgid "{} No se pudieron resolver las dependencias automáticamente"
+msgstr "{} Δεν ήταν δυνατή η αυτόματη επίλυση των εξαρτήσεων"
+
+msgid "{} Error al ejecutar dpkg: {}"
+msgstr "{} Σφάλμα κατά την εκτέλεση του dpkg: {}"
+
+msgid "{} Iniciando la instalación de ProtonPass v{}"
+msgstr "{} Έναρξη εγκατάστασης ProtonPass v{}"
+
+msgid "{} Se ha obtenido la información de la versión"
+msgstr "{} Λήφθηκαν οι πληροφορίες έκδοσης"
+
+msgid "{} ¡AVISO! La suma de verificación no coincide."
+msgstr "{} ΠΡΟΕΙΔΟΠΟΙΗΣΗ! Το άθροισμα ελέγχου δεν ταιριάζει."
+
+msgid " El archivo descargado podría estar corrupto o comprometido."
+msgstr "Το αρχείο που λήφθηκε μπορεί να είναι κατεστραμμένο ή αλλοιωμένο."
+
+msgid " Por seguridad, no se procederá con la instalación."
+msgstr "Για λόγους ασφαλείας, η εγκατάσταση δεν θα συνεχιστεί."
+
+msgid "{} La suma de verificación coincide"
+msgstr "{} Το άθροισμα ελέγχου ταιριάζει"
+
+msgid "{} Se ha producido un error durante el proceso: {}"
+msgstr "{} Παρουσιάστηκε σφάλμα κατά τη διάρκεια της διαδικασίας: {}"
+
+msgid "Descarga, verifica e instala ProtonPass automáticamente"
+msgstr "Αυτόματη λήψη, επαλήθευση και εγκατάσταση του ProtonPass"
+
+msgid "Ejemplo: python3 protonpass_installer.py 1.32.5"
+msgstr "Παράδειγμα: python3 protonpass_installer.py 1.32.5"
+
+msgid "Versión de ProtonPass a instalar (por ejemplo: 1.32.5)"
+msgstr "Έκδοση ProtonPass για εγκατάσταση (π.χ.: 1.32.5)"
+
+msgid "Únicamente descarga y verifica, no instala"
+msgstr "Μόνο λήψη και επαλήθευση, χωρίς εγκατάσταση"
+
+msgid "{} Este «script» está diseñado para sistemas basados en Debian/Ubuntu o Fedora/RHEL"
+msgstr "{} Το σενάριο αυτό σχεδιάστηκε για συστήματα βασισμένα σε Debian/Ubuntu ή Fedora/RHEL"
+
+msgid "{} Error: No se puede conectar a internet"
+msgstr "{} Σφάλμα: Δεν είναι δυνατή η σύνδεση στο διαδίκτυο"
+
+msgid "{} Se activa el modo de verificación, no se instalará la aplicación"
+msgstr "{} Ενεργοποιήθηκε η λειτουργία μόνο-επαλήθευσης"
+
+msgid "{} ¡ProtonPass se ha instalado correctamente!"
+msgstr "{} Το ProtonPass εγκαταστάθηκε με επιτυχία!"
+
+msgid " Puedes encontrarlo en el menú de aplicaciones o ejecutar 'proton-pass'"
+msgstr "Θα το βρείτε στο μενού εφαρμογών ή εκτελέστε 'proton-pass'"
+
+msgid "{} Ha fallado la instalación. Revisa los errores anteriores."
+msgstr "{} Η εγκατάσταση απέτυχε. Ελέγξτε τα προηγούμενα σφάλματα."
+
+msgid "Muestra los idiomas disponibles y sale"
+msgstr "Εμφανίζει τις διαθέσιμες γλώσσες και τερματίζει"
+
+msgid "Establece el idioma de la aplicación (por ejemplo: -l es) y sale"
+msgstr "Ορίζει τη γλώσσα της εφαρμογής (π.χ., -l el) και τερματίζει"
+
+msgid "Muestra la versión del programa y sale"
+msgstr "Εμφανίζει την έκδοση του προγράμματος και τερματίζει"
+
+msgid "Idiomas disponibles"
+msgstr "Διαθέσιμες γλώσσες"
+
+msgid "Se ha actualizado el idioma a: {}"
+msgstr "Η γλώσσα ενημερώθηκε σε: {}"
+
+msgid "No se ha podido actualizar el idioma"
+msgstr "Δεν ήταν δυνατή η ενημέρωση της γλώσσας"
