@@ -1,0 +1,143 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-06 20:46+0200\n"
+"PO-Revision-Date: 2025-09-06 21:17+0200\n"
+"Language-Team: Hungarian\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.3\n"
+
+msgid "{} Advertencia: No se han podido limpiar los archivos temporales: {}"
+msgstr "Figyelmeztetés: Nem sikerült törölni az ideiglenes fájlokat: {}"
+
+msgid "{} Obteniendo la información de las versiones..."
+msgstr "{} Verzióinformációk lekérése..."
+
+msgid "La versión {} no se ha encontrado en el JSON"
+msgstr "A(z) {} verzió nem található a JSON fájlban"
+
+msgid "Error al obtener la información de las versiones: {}"
+msgstr "Hiba a verzióinformációk lekérdezésekor: {}"
+
+msgid "No se ha encontrado el archivo {} en la información de la versión"
+msgstr "A(z) {} fájl nem található a verzióinformációk között"
+
+msgid "{} Descargando {}..."
+msgstr "{} letöltése folyamatban: {}..."
+
+msgid "{} Progreso: {percent:.1f}%"
+msgstr "{} Előrehaladás: {percent:.1f}%"
+
+msgid "{} Descarga finalizada: {}"
+msgstr "{} Letöltés kész: {}"
+
+msgid "Error al descargar el archivo: {}"
+msgstr "Hiba a fájl letöltésekor: {}"
+
+msgid "{} Calculando la suma de verificación (SHA512)..."
+msgstr "{} Ellenőrző összeg számítása (SHA512)..."
+
+msgid "{} Suma de verificación esperada: {}"
+msgstr "{} Elvárt ellenőrző összeg: {}"
+
+msgid "{} Suma de verificación calculada: {}"
+msgstr "{} Számított ellenőrző összeg: {}"
+
+msgid "{} Instalando ProtonPass..."
+msgstr "{} ProtonPass telepítése..."
+
+msgid "{} Error: Se requieren permisos de superusuario para instalar el paquete"
+msgstr "{} Hiba: Rendszergazdai jogosultság szükséges a csomag telepítéséhez"
+
+msgid "{} ProtonPass se ha instalado correctamente"
+msgstr "{} A ProtonPass sikeresen telepítve lett"
+
+msgid "{} Error durante la instalación:"
+msgstr "{} Hiba a telepítés során:"
+
+msgid "{} Intentando resolver las dependencias..."
+msgstr "{} Függőségek megoldása folyamatban..."
+
+msgid "{} Dependencias resueltas, ProtonPass se ha instalado correctamente"
+msgstr "{} A függőségek megoldódtak, a ProtonPass sikeresen telepítve lett"
+
+msgid "{} No se pudieron resolver las dependencias automáticamente"
+msgstr "{} A függőségeket nem sikerült automatikusan megoldani"
+
+msgid "{} Error al ejecutar dpkg: {}"
+msgstr "{} Hiba a dpkg futtatásakor: {}"
+
+msgid "{} Iniciando la instalación de ProtonPass v{}"
+msgstr "{} ProtonPass v{} telepítésének indítása"
+
+msgid "{} Se ha obtenido la información de la versión"
+msgstr "{} Verzióinformációk lekérve"
+
+msgid "{} ¡AVISO! La suma de verificación no coincide."
+msgstr "{} FIGYELMEZTETÉS! Az ellenőrző összeg nem egyezik."
+
+msgid " El archivo descargado podría estar corrupto o comprometido."
+msgstr "A letöltött fájl megsérülhetett vagy kompromittálódhatott."
+
+msgid " Por seguridad, no se procederá con la instalación."
+msgstr "Biztonsági okokból a telepítés nem folytatódik."
+
+msgid "{} La suma de verificación coincide"
+msgstr "{} Az ellenőrző összeg megegyezik"
+
+msgid "{} Se ha producido un error durante el proceso: {}"
+msgstr "{} Hiba történt a folyamat során: {}"
+
+msgid "Descarga, verifica e instala ProtonPass automáticamente"
+msgstr "A ProtonPass automatikus letöltése, ellenőrzése és telepítése"
+
+msgid "Ejemplo: python3 protonpass_installer.py 1.32.5"
+msgstr "Példa: python3 protonpass_installer.py 1.32.5"
+
+msgid "Versión de ProtonPass a instalar (por ejemplo: 1.32.5)"
+msgstr "Telepítendő ProtonPass verzió (pl.: 1.32.5)"
+
+msgid "Únicamente descarga y verifica, no instala"
+msgstr "Csak letöltés és ellenőrzés, telepítés nélkül"
+
+msgid "{} Este «script» está diseñado para sistemas basados en Debian/Ubuntu o Fedora/RHEL"
+msgstr "{} Ez a szkript Debian/Ubuntu vagy Fedora/RHEL alapú rendszerekhez készült"
+
+msgid "{} Error: No se puede conectar a internet"
+msgstr "{} Hiba: Nem lehet csatlakozni az internethez"
+
+msgid "{} Se activa el modo de verificación, no se instalará la aplicación"
+msgstr "{} Csak-ellenőrzés mód engedélyezve"
+
+msgid "{} ¡ProtonPass se ha instalado correctamente!"
+msgstr "{} A ProtonPass sikeresen telepítve lett!"
+
+msgid " Puedes encontrarlo en el menú de aplicaciones o ejecutar 'proton-pass'"
+msgstr "Az alkalmazások menüjében megtalálható, vagy futtassa a 'proton-pass' parancsot"
+
+msgid "{} Ha fallado la instalación. Revisa los errores anteriores."
+msgstr "{} A telepítés sikertelen. Ellenőrizze a korábbi hibákat."
+
+msgid "Muestra los idiomas disponibles y sale"
+msgstr "Megjeleníti az elérhető nyelveket és kilép"
+
+msgid "Establece el idioma de la aplicación (por ejemplo: -l es) y sale"
+msgstr "Beállítja az alkalmazás nyelvét (pl.: -l hu) és kilép"
+
+msgid "Muestra la versión del programa y sale"
+msgstr "Megjeleníti a program verzióját és kilép"
+
+msgid "Idiomas disponibles"
+msgstr "Elérhető nyelvek"
+
+msgid "Se ha actualizado el idioma a: {}"
+msgstr "A nyelv frissítve lett: {}"
+
+msgid "No se ha podido actualizar el idioma"
+msgstr "A nyelvet nem sikerült frissíteni"

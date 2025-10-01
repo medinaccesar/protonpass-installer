@@ -1,7 +1,7 @@
 # protonpass-installer
 
 ![Estado](https://img.shields.io/badge/Estado-Estable-yellow?style=for-the-badge)
-![Versión](https://img.shields.io/badge/Versión-1.1.0-blue?style=for-the-badge)
+![Versión](https://img.shields.io/badge/Versión-2.0.0-blue?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)
 ![Licencia](https://img.shields.io/badge/Licencia-GPL_v3-blue.svg?style=for-the-badge)
 
@@ -9,7 +9,7 @@
 
 ## 📋 Descripción
 
-Descarga, verifica e instala ProtonPass automáticamente en Debian/Ubuntu
+Descarga, verifica e instala ProtonPass automáticamente en linux (Debian/Ubuntu y Fedora/RHEL)
 
 ## ✨ Características
 
@@ -17,14 +17,12 @@ Descarga, verifica e instala ProtonPass automáticamente en Debian/Ubuntu
 - 🔍 **Verificación de la integridad** del mismo (checksum)
 - 🚀 **Ejecución automática** del instalador
 - 🌍 **Soporte multiidioma** (internacionalización con gettext)
-- ⚡ **Interfaz de línea de comandos** intuitiva
+
 
 ## 🛠️ Requisitos previos
 
 - Python 3.10 o superior
 - pip (gestor de paquetes de Python)
-- Conexión a internet para que pueda descargar el instalador oficial de ProtonPass
-- Se necesita permiso de superusuario para instalar el paquete (ejecutar con 'sudo')
 
 ## 📦 Instalación de dependencias
 
@@ -34,7 +32,7 @@ Descarga, verifica e instala ProtonPass automáticamente en Debian/Ubuntu
 
 ## 🚀 Uso
 ```
-usage: protonpass_installer.py [-h] [-n] [-f] [-ll | -l LANGUAGE | -v] [version]
+usage: protonpass_installer.py [-h] [-n] [-ll | -l LANGUAGE | -v] [version]
 
 Descarga, verifica e instala ProtonPass automáticamente
 
@@ -43,8 +41,7 @@ positional arguments:
 
 options:
   -h, --help            show this help message and exit
-  -n, --no-install      Únicamente descarga y verifica, no instala
-  -f, --force-deps      Forzar la instalación de dependencias
+  -n, --no-install      Únicamente descarga y verifica, no instala 
   -ll, --list-languages
                         Muestra los idiomas disponibles y sale
   -l LANGUAGE, --language LANGUAGE
@@ -117,16 +114,10 @@ python3 protonpass_installer.py -l it
     # Ahora se puede ejecutar desde cualquier ubicación
     protonpass-installer -h
     ```
-* **Otras formas de instalación :**
-
-
-   -**PyInstaller:** Se puede generar un ejecutable usando PyInstaller.
-
-   -**Paquete .deb:** Se puede crear un paquete instalable para distribuciones basadas en Debian/Ubuntu.
 
 ## 🌍 Internacionalización
 
-El script soporta múltiples idiomas mediante gettext. Los archivos de traducción se encuentran en la carpeta locales/.
+El «script» soporta múltiples idiomas mediante gettext. Los archivos de traducción se encuentran en la carpeta locales/.
 **El archivo de configuración `.env` con el idioma preferido se crea automáticamente durante la primera ejecución** del programa.
 
 ### Idiomas disponibles:
@@ -145,12 +136,14 @@ El script soporta múltiples idiomas mediante gettext. Los archivos de traducci�
     🇸🇪 Sueco
     🇸🇦 Árabe
     🇨🇳 Chino
+    🇬🇷 Griego
+    🇭🇺 Húngaro
 
 ### Configuración automática
-En la primera ejecución, el script:
+En la primera ejecución, el «script»:
 1. ✅ Detecta el idioma del sistema operativo
 2. ✅ Crea el archivo `.env` con la configuración de idioma
-3. ✅ Permite la personalización posterior 
+3. ✅ La aplicación permite establecer otro idioma más tarde 
 
 ### Listar los idiomas disponibles
  ```
@@ -181,5 +174,4 @@ Si encuentras algún error o tienes sugerencias o preguntas:
    
 1. 📧 Abre un [issue](https://github.com/medinaccesar/protonpass-installer/issues)
 
-## Líneas futuras
-1. ✅ Soportar rpm (Fedora/RHEL)
+

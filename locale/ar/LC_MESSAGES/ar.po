@@ -152,9 +152,8 @@ msgid "Únicamente descarga y verifica, no instala"
 msgstr "قم بالتنزيل والتحقق فقط، لا تثبت"
 
 #: protonpass_installer.py:237
-msgid "{} Este «script» está diseñado para sistemas basados en Debian/Ubuntu"
-msgstr "{} تم تصميم هذا البرنامج النصي لأنظمة Debian/Ubuntu"
-
+msgid "{} Este «script» está diseñado para sistemas basados en Debian/Ubuntu o Fedora/RHEL"
+msgstr "{} هذا البرنامج النصي مصمم للأنظمة القائمة على Debian/Ubuntu أو Fedora/RHEL."
 #: protonpass_installer.py:243
 msgid "{} Error: No se puede conectar a internet"
 msgstr "{} خطأ: لا يمكن الاتصال بالإنترنت"

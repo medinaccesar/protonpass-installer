@@ -1,3 +1,18 @@
+# This file is distributed under the same license as the PACKAGE.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-06 20:46+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Romanian <LL@li.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
 msgid "{} Advertencia: No se han podido limpiar los archivos temporales: {}"
 msgstr "{} Avertisment: Nu s-au putut curăța fișierele temporare: {}"
 
@@ -91,8 +106,8 @@ msgstr "Versiunea ProtonPass de instalat (de exemplu: 1.32.5)"
 msgid "Únicamente descarga y verifica, no instala"
 msgstr "Doar descarcă și verifică, nu instalează"
 
-msgid "{} Este «script» está diseñado para sistemas basados en Debian/Ubuntu"
-msgstr "{} Acest script este conceput pentru sisteme bazate pe Debian/Ubuntu"
+msgid "{} Este «script» está diseñado para sistemas basados en Debian/Ubuntu o Fedora/RHEL"
+msgstr "{} Acest „script” este conceput pentru sisteme bazate pe Debian/Ubuntu sau Fedora/RHEL"
 
 msgid "{} Error: No se puede conectar a internet"
 msgstr "{} Eroare: Nu se poate conecta la internet"
