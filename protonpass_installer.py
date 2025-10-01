@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Descarga, verifica e instala ProtonPass automáticamente en Debian/Ubuntu.
+Descarga, verifica e instala ProtonPass automáticamente en LINUX (Debian/Ubuntu y Fedora/RHEL).
 Autor: CésarM
 """
 
@@ -60,7 +60,6 @@ class ProtonPassInstaller:
 
             version_data = response.json()
 
-            # Buscar la versión específica
             for release in version_data.get("Releases", []):
                 if release.get("Version") == self.version:
                     return release
@@ -350,12 +349,6 @@ def load_conf() -> Callable[[str], str]:
     locale_dir = env['base_locale_path'] / 'locale'
     lang = os.getenv('IDIOMA', 'es').strip()
     t = gettext.translation(lang, locale_dir, [lang], fallback=True)
-    # if lang == 'es':
-    #     t = gettext.translation(lang, locale_dir, [lang], fallback=True)
-    # else:
-    #     mo_file = locale_dir / lang / 'LC_MESSAGES' / f'{lang}.mo'
-    #     with open(mo_file, 'rb') as fp:
-    #         t = gettext.GNUTranslations(fp)
     return t.gettext
 
 
